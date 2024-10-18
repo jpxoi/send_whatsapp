@@ -34,6 +34,11 @@ def send_message_to_group(group_id, message, time_hour, time_minute, wait_time, 
     except Exception as e:
         logging.error(f"Failed to send message to group: {e}")
 
+# Helper function to get input with a default value
+def get_input_with_default(prompt, default_value, cast_func=str):
+    user_input = input(f"{prompt} [{default_value}]: ")
+    return cast_func(user_input) if user_input.strip() else default_value
+
 # Input Mode Selection
 mode = input("Enter mode ('contact' or 'group'): ").lower()
 
@@ -52,9 +57,11 @@ else:
 message = input("Write the message here: ")
 time_hour = int(input("Enter the hour (24-hour format): "))
 time_minute = int(input("Enter the minute: "))
-waiting_time_to_send = 15  # You can make this dynamic too if needed
-close_tab = True
-waiting_time_to_close = 2
+
+# Collect optional inputs with defaults
+waiting_time_to_send = get_input_with_default("Enter waiting time to send (in seconds)", 15, int)
+close_tab = get_input_with_default("Close tab after sending? (True/False)", True, lambda x: x.lower() == 'true')
+waiting_time_to_close = get_input_with_default("Enter waiting time to close tab (in seconds)", 2, int)
 
 mode = input("Enter mode ('contact' or 'group'): ").lower()
 
