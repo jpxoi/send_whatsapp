@@ -154,7 +154,7 @@ Logging is set up to keep track of all key events, such as:
 - Validation errors.
 - Any issues encountered during execution.
 
-The logs are written to a file called `whatsapp_log.txt` in the same directory as the script.
+The logs are written to a file called `whatsapp_message_sender.log` in the same directory as the script.
 
 You can modify the logging setup in `utils.py`:
 
@@ -164,7 +164,7 @@ def setup_logging():
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
         handlers=[
-            logging.FileHandler("whatsapp_log.txt"),
+            logging.FileHandler("whatsapp_message_sender.log"),
             # logging.StreamHandler()  # Uncomment to log to the console as well
         ]
     )
