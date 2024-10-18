@@ -10,10 +10,9 @@
 4. [Usage](#usage)
    - [Command-line Mode](#command-line-mode)
    - [Interactive Mode](#interactive-mode)
-5. [Configuration](#configuration)
-6. [Modules Overview](#modules-overview)
-7. [Error Handling](#error-handling)
-8. [Logging](#logging)
+5. [Modules Overview](#modules-overview)
+6. [Error Handling](#error-handling)
+7. [Logging](#logging)
 
 ---
 
@@ -101,20 +100,6 @@ The program will guide you through:
 3. Writing the message to send.
 4. Specifying the time (hour and minute).
 5. Optionally modifying waiting times and whether to close the tab after sending.
-
----
-
-## Configuration
-
-You can modify default values for certain parameters (like waiting times) by editing `config.py`. This file contains all default settings used throughout the application.
-
-```python
-# config.py
-
-DEFAULT_WAITING_TIME_TO_SEND = 15  # in seconds
-DEFAULT_CLOSE_TAB = True
-DEFAULT_WAITING_TIME_TO_CLOSE = 2  # in seconds
-```
 
 ---
 
