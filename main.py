@@ -1,6 +1,6 @@
 import argparse
-from sender import WhatsAppMessageSender
-from input_handler import collect_inputs
+from src.sender import WhatsAppMessageSender
+from src.input_handler import collect_inputs
 
 def main():
     # Set up argument parser for command-line arguments
