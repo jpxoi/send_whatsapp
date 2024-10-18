@@ -1,5 +1,5 @@
 import logging
-from src.utils import validate_phone_number, validate_time
+from utils import validate_phone_number, validate_time
 
 def collect_inputs(sender):
     """Interactive input collection for WhatsAppMessageSender"""

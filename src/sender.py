@@ -1,6 +1,6 @@
 import pywhatkit
 import logging
-from src.utils import setup_logging
+from utils import setup_logging
 
 setup_logging()  # Configure logging
 
