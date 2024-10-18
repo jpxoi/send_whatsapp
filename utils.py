@@ -7,7 +7,7 @@ def setup_logging():
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
         handlers=[
-            logging.FileHandler("whatsapp_log.txt"),
+            logging.FileHandler("whatsapp_message_sender.log"),
             # logging.StreamHandler()  # Uncomment to log to console as well
         ]
     )
